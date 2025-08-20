@@ -4,40 +4,561 @@
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
+    <meta name="theme-color" content="#5B455E" />
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Behind the Curtain Ops - Creative Digital Solutions & Operations Excellence. Specializing in UI/UX Design, Web Development, Virtual Assistant Services, and Digital Marketing Solutions." />
+    <meta name="keywords" content="Behind the Curtain Ops, Virtual Assistant, UI/UX Designer, Web Developer, Digital Operations, Creative Solutions, Executive Assistant, Digital Marketing, Business Operations" />
+    <meta name="author" content="Behind the Curtain Ops" />
+    
+    <!-- Open Graph Meta Tags for Social Sharing -->
+    <meta property="og:title" content="Behind the Curtain Ops - Creative Digital Solutions & Operations Excellence" />
+    <meta property="og:description" content="Professional digital solutions and operations support. From creative design to executive assistance - we handle the details behind your success." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://cwavua.io" />
+    <meta property="og:image" content="https://cwavua.io/og-image.jpg" />
+    <meta property="og:site_name" content="Behind the Curtain Ops" />
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Behind the Curtain Ops - Creative Digital Solutions" />
+    <meta name="twitter:description" content="Professional digital solutions and operations support. From creative design to executive assistance - we handle the details behind your success." />
+    <meta name="twitter:image" content="https://cwavua.io/twitter-card.jpg" />
+    <meta name="twitter:site" content="@behindcurtainops" />
+    
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="%PUBLIC_URL%/favicon-16x16.png" />
+    
+    <!-- Manifest -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    
+    <!-- Sitemap -->
+    <link rel="sitemap" type="application/xml" href="%PUBLIC_URL%/sitemap.xml" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://cwavua.io/" />
+    
+    <!-- Preconnect to Google Fonts for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Premium Emotional Typography Stack -->
+    <link 
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" 
+      rel="stylesheet"
+    />
+    <link 
+      href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" 
+      rel="stylesheet"
+    />
+    <link 
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" 
+      rel="stylesheet"
+    />
+    <link 
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" 
+      rel="stylesheet"
+    />
+    
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Behind the Curtain Ops",
+      "alternateName": "Behind the Curtain Operations",
+      "description": "Professional digital solutions and operations support. From creative design to executive assistance - we handle the details behind your success.",
+      "url": "https://cwavua.io",
+      "logo": "https://cwavua.io/logo.png",
+      "sameAs": [
+        "https://linkedin.com/company/behind-the-curtain-ops",
+        "https://twitter.com/behindcurtainops",
+        "https://facebook.com/behindthecurtainops"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Service",
+        "availableLanguage": "English"
+      },
+      "areaServed": "Worldwide",
+      "foundingLocation": {
+        "@type": "Place",
+        "name": "Nairobi, Kenya"
+      },
+      "serviceType": [
+        "Virtual Assistant Services",
+        "UI/UX Design",
+        "Web Development",
+        "Digital Marketing",
+        "Executive Assistant Services",
+        "Business Operations Support",
+        "Creative Design Solutions"
+      ]
+    }
+    </script>
+    
+    <!-- Performance Optimization -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
+    
+    <!-- Enhanced CSS Variables and Styles -->
+    <style>
+      :root {
+        --night: #1a1a2e;
+        --deep-navy: #16213e;
+        --primary-purple: #5B455E;
+        --rose-quartz: #A599B5;
+        --soft-rose: #C4B5C7;
+        --cream: #faf7f0;
+        --warm-white: #fffef7;
+        --gold-accent: #d4af37;
+        --sage-green: #9caf88;
+        --soft-coral: #ff6b6b;
+        --pearl: #f8f8ff;
+      }
+      
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      body {
+        font-family: 'Crimson Text', serif;
+        background-color: var(--warm-white);
+        color: var(--night);
+        overflow-x: hidden;
+        visibility: hidden;
+      }
+      
+      /* Enhanced Loading Screen with new color */
+      .loading-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, var(--primary-purple) 0%, #6B5B6E 35%, #7A6B7D 70%, #8A7B8D 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        overflow: hidden;
+      }
+      
+      .loading-container {
+        text-align: center;
+        position: relative;
+        z-index: 2;
+      }
+      
+      .loading-logo {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(2.5rem, 8vw, 5rem);
+        font-weight: 700;
+        color: var(--warm-white);
+        text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        margin-bottom: 2rem;
+        opacity: 0;
+        transform: translateY(50px) scale(0.8);
+      }
+      
+      .loading-subtitle {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: clamp(1rem, 3vw, 1.5rem);
+        color: var(--warm-white);
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        opacity: 0;
+        transform: translateY(30px);
+        margin-bottom: 3rem;
+        font-style: italic;
+      }
+      
+      .loading-progress {
+        position: relative;
+        width: 300px;
+        height: 3px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 10px;
+        margin: 0 auto 2rem;
+        overflow: hidden;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      
+      .progress-bar {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, var(--warm-white), var(--gold-accent), var(--warm-white));
+        border-radius: 10px;
+        transition: left 0.3s ease;
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+      }
+      
+      .loading-percentage {
+        font-family: 'Libre Baskerville', serif;
+        font-size: 1.2rem;
+        color: var(--warm-white);
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      
+      /* Floating Elements */
+      .floating-element {
+        position: absolute;
+        opacity: 0;
+        pointer-events: none;
+      }
+      
+      .float-circle {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background: linear-gradient(45deg, rgba(255, 255, 255, 0.2), rgba(212, 175, 55, 0.3));
+        filter: blur(20px);
+      }
+      
+      .float-square {
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(45deg, rgba(255, 255, 255, 0.25), rgba(212, 175, 55, 0.2));
+        border-radius: 15px;
+        filter: blur(15px);
+      }
+      
+      .float-triangle {
+        width: 0;
+        height: 0;
+        border-left: 30px solid transparent;
+        border-right: 30px solid transparent;
+        border-bottom: 52px solid rgba(255, 255, 255, 0.3);
+        filter: blur(12px);
+        opacity: 0.7;
+      }
+      
+      /* Particle Effect */
+      .particle {
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        background: var(--warm-white);
+        border-radius: 50%;
+        opacity: 0;
+        pointer-events: none;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+      }
+      
+      /* Smooth scrolling */
+      html {
+        scroll-behavior: smooth;
+      }
+      
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+      
+      ::-webkit-scrollbar-track {
+        background: var(--cream);
+      }
+      
+      ::-webkit-scrollbar-thumb {
+        background: linear-gradient(to bottom, var(--primary-purple), var(--gold-accent));
+        border-radius: 5px;
+        border: 2px solid var(--cream);
+      }
+      
+      ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(to bottom, var(--gold-accent), var(--primary-purple));
+      }
+      
+      /* App transition */
+      .app-loaded .loading-screen {
+        pointer-events: none;
+      }
+      
+      #root {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      
+      .app-ready #root {
+        opacity: 1;
+        transform: translateY(0);
+        transition: all 1s ease-out;
+      }
+      
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        .loading-progress {
+          width: 250px;
+        }
+        
+        .float-circle, .float-square {
+          transform: scale(0.7);
+        }
+        
+        .loading-logo {
+          font-size: clamp(2rem, 6vw, 3.5rem);
+        }
+      }
+    </style>
+    
+    <title>Behind the Curtain Ops - Creative Digital Solutions & Operations Excellence</title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <noscript>
+      <div style="text-align: center; padding: 50px; font-family: 'Crimson Text', serif;">
+        <h1>JavaScript Required</h1>
+        <p>You need to enable JavaScript to run this application.</p>
+        <p>Behind the Curtain Ops is a modern React application that requires JavaScript to display properly.</p>
+      </div>
+    </noscript>
+    
+    <!-- Enhanced Loading Screen -->
+    <div class="loading-screen" id="loading-screen">
+      <!-- Floating Background Elements -->
+      <div class="floating-element float-circle" style="top: 10%; left: 15%;"></div>
+      <div class="floating-element float-square" style="top: 60%; right: 20%;"></div>
+      <div class="floating-element float-triangle" style="bottom: 25%; left: 25%;"></div>
+      <div class="floating-element float-circle" style="top: 40%; right: 10%;"></div>
+      <div class="floating-element float-square" style="bottom: 15%; right: 40%;"></div>
+      
+      <!-- Particles -->
+      <div class="particle" style="top: 20%; left: 30%;"></div>
+      <div class="particle" style="top: 70%; left: 60%;"></div>
+      <div class="particle" style="top: 45%; left: 80%;"></div>
+      <div class="particle" style="top: 30%; left: 10%;"></div>
+      <div class="particle" style="top: 80%; left: 40%;"></div>
+      
+      <div class="loading-container">
+        <h1 class="loading-logo">Behind the Curtain Ops</h1>
+        <p class="loading-subtitle">Creative Digital Solutions</p>
+        
+        <div class="loading-progress">
+          <div class="progress-bar" id="progress-bar"></div>
+        </div>
+        
+        <div class="loading-percentage" id="loading-percentage">0%</div>
+      </div>
+    </div>
+    
+    <!-- React App Root -->
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
+    
+    <!-- Enhanced Loading Screen Script with GSAP -->
+    <script>
+      // Initialize GSAP and create loading animation
+      document.addEventListener('DOMContentLoaded', function() {
+        // Set body visibility
+        gsap.set('body', { visibility: 'visible' });
+        
+        // Create main timeline
+        const loadingTL = gsap.timeline();
+        
+        // Animate floating elements entrance
+        gsap.set('.floating-element', { scale: 0, rotation: -180 });
+        gsap.set('.particle', { scale: 0 });
+        
+        // Animate background elements
+        gsap.to('.floating-element', {
+          duration: 2,
+          scale: 1,
+          rotation: 0,
+          opacity: 0.6,
+          ease: 'elastic.out(1, 0.3)',
+          stagger: 0.2,
+          delay: 0.5
+        });
+        
+        // Animate particles
+        gsap.to('.particle', {
+          duration: 1.5,
+          scale: 1,
+          opacity: 0.8,
+          ease: 'power2.out',
+          stagger: 0.1,
+          delay: 0.8
+        });
+        
+        // Main content animation
+        loadingTL
+          .to('.loading-logo', {
+            duration: 1.2,
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            ease: 'power3.out',
+            delay: 0.3
+          })
+          .to('.loading-subtitle', {
+            duration: 1,
+            opacity: 1,
+            y: 0,
+            ease: 'power2.out'
+          }, '-=0.6')
+          .to('.loading-percentage', {
+            duration: 0.8,
+            opacity: 1,
+            y: 0,
+            ease: 'power2.out'
+          }, '-=0.4');
+        
+        // Floating animation for elements
+        gsap.to('.float-circle', {
+          duration: 4,
+          y: '+=30',
+          rotation: 360,
+          ease: 'sine.inOut',
+          repeat: -1,
+          yoyo: true,
+          stagger: 0.5
+        });
+        
+        gsap.to('.float-square', {
+          duration: 5,
+          x: '+=40',
+          rotation: -360,
+          ease: 'sine.inOut',
+          repeat: -1,
+          yoyo: true,
+          stagger: 0.3
+        });
+        
+        gsap.to('.float-triangle', {
+          duration: 6,
+          rotation: 360,
+          ease: 'none',
+          repeat: -1
+        });
+        
+        // Particle floating animation
+        gsap.to('.particle', {
+          duration: 3,
+          y: '+=50',
+          x: '+=30',
+          ease: 'sine.inOut',
+          repeat: -1,
+          yoyo: true,
+          stagger: 0.4
+        });
+        
+        // Progress bar animation
+        let progress = 0;
+        const progressBar = document.getElementById('progress-bar');
+        const percentageElement = document.getElementById('loading-percentage');
+        
+        const progressInterval = setInterval(() => {
+          progress += Math.random() * 15 + 5;
+          if (progress > 100) progress = 100;
+          
+          gsap.to(progressBar, {
+            duration: 0.3,
+            left: `${progress - 100}%`,
+            ease: 'power2.out'
+          });
+          
+          gsap.to(percentageElement, {
+            duration: 0.5,
+            textContent: Math.floor(progress) + '%',
+            ease: 'power2.out'
+          });
+          
+          if (progress >= 100) {
+            clearInterval(progressInterval);
+            setTimeout(finishLoading, 800);
+          }
+        }, 200);
+        
+        function finishLoading() {
+          // Exit animation
+          const exitTL = gsap.timeline({
+            onComplete: () => {
+              document.getElementById('loading-screen').remove();
+              document.body.classList.add('app-ready');
+            }
+          });
+          
+          exitTL
+            .to('.loading-percentage', {
+              duration: 0.4,
+              opacity: 0,
+              y: -20,
+              ease: 'power2.in'
+            })
+            .to('.loading-progress', {
+              duration: 0.5,
+              scaleX: 0,
+              opacity: 0,
+              ease: 'power2.in'
+            }, '-=0.2')
+            .to('.loading-subtitle', {
+              duration: 0.6,
+              opacity: 0,
+              y: -30,
+              ease: 'power2.in'
+            }, '-=0.3')
+            .to('.loading-logo', {
+              duration: 0.8,
+              opacity: 0,
+              y: -50,
+              scale: 0.8,
+              ease: 'power2.in'
+            }, '-=0.4')
+            .to('.floating-element', {
+              duration: 0.6,
+              scale: 0,
+              opacity: 0,
+              rotation: 180,
+              ease: 'power2.in',
+              stagger: 0.1
+            }, '-=0.6')
+            .to('.particle', {
+              duration: 0.4,
+              scale: 0,
+              opacity: 0,
+              ease: 'power2.in',
+              stagger: 0.05
+            }, '-=0.4')
+            .to('.loading-screen', {
+              duration: 1,
+              opacity: 0,
+              scale: 1.1,
+              ease: 'power2.inOut'
+            }, '-=0.2');
+        }
+      });
+      
+      // Performance monitoring
+      if ('performance' in window) {
+        window.addEventListener('load', function() {
+          setTimeout(function() {
+            const perfData = performance.getEntriesByType('navigation')[0];
+            console.log('Page Load Time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms');
+          }, 0);
+        });
+      }
+    </script>
+    
+    <!-- Analytics placeholder (replace with your actual analytics) -->
+    <!-- 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
     -->
   </body>
 </html>
